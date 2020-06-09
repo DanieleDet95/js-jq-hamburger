@@ -1,34 +1,37 @@
 // Dichiarazione variabili generali
-var bottoneMenuApertura = $('a.open i');
-var bottoneMenuChiusura = $('a.close i');
-var menu = $('.hamburger-menu');
+var bottoneBurgerOpen = $('.header-right > a');
+var bottoneBurgerClose = $('.hamburger-menu a.close ');
 
 // METODO 1#
 // Far comparire il menu
-bottoneMenuApertura.click(
+bottoneBurgerOpen.click(
   function(){
-    menu.fadeIn(200);
+    var menu = $('.hamburger-menu');
+    menu.addClass( 'active' );
   }
 );
 
 // Far scomparire il menu
-bottoneMenuChiusura.click(
+bottoneBurgerClose.click(
   function(){
-    menu.fadeOut(200);
+    var menu = $('.hamburger-menu');
+    menu.removeClass( 'active' );
   }
 );
 
-// METODO 2#
+// // METODO 2#
 // // Far comparire il menu
-// bottoneMenuApertura.click(
+// bottoneBurgerOpen.click(
 //   function(){
-//     menu.addClass( 'close' );
+//     var menu = $('.hamburger-menu');
+//     menu.fadeIn(200);
 //   }
 // );
 //
 // // Far scomparire il menu
-// bottoneMenuChiusura.click(
+// bottoneBurgerClose.click(
 //   function(){
-//     menu.removeClass( 'close' );
+//     var menu = $('.hamburger-menu');
+//     menu.fadeOut(200);
 //   }
 // );
